@@ -1,14 +1,25 @@
+@font-face {
+  font-family: 'Galano';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/ReneBiederAlt.otf');
+  src: url('./assets/font/ReneBieder.otf');
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Galano' !important;
+  color: rgba(0,0,0,.53);
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
 }
