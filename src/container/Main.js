@@ -9,7 +9,7 @@ class Main extends Component {
                 <Header />
                 <Route exact path="/" component={Works}/>
                 <Route path="/about" component={About}/>
-                <Route path="/Detail" component={Detail}/>
+                <Route path="/Detail/:id" component={Detail}/>
             </div>
         )
     }

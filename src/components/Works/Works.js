@@ -1,9 +1,8 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import { CSSTransitionGroup } from 'react-transition-group';
-import './Works.css';
-import { Link } from 'react-router-dom';
-import { Koen, Mealcheck, Memopad, Plant}  from '../../assets/img';
+import { Link, NavLink } from 'react-router-dom';
+import { Koen, Mealcheck, Plant}  from '../../assets/img';
 
 const Main = styled.div`
     display: -webkit-box;
@@ -81,11 +80,10 @@ const Item = styled.div`
     grid-column-start: auto;
     grid-row-start: auto;
     color: #fff;
-
     background-size: cover;
     background-position: center;
-    -webkit-box-shadow: -1px 1px 5px 0px rgba(68, 68, 68, 0.4);
-    box-shadow: -1px 1px 5px 0px rgba(68, 68, 68, 0.4);
+    box-shadow: -1px 1px 5px 0px rgba(200, 200, 200, 0.4);
+    -webkit-box-shadow: -1px 1px 5px 0px rgba(200, 200, 200, 0.4);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: -webkit-transform 0.3s ease-in-out;
     cursor: pointer;
@@ -94,22 +92,31 @@ const Item = styled.div`
     &:hover {
         -webkit-transform: scale(1.02);
         transform: scale(1.02);
-    }
-
-    &:hover:after {
-       opacity: 0.2;
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
         background-color: #778899;
-        opacity: 0;
-        -webkit-transition: opacity 0.3s ease-in-out;
-        transition: opacity 0.3s ease-in-out;  
     }
+
+    & div {
+        display: none;
+    }
+
+    &:hover div {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 900;
+        z-index: 1;
+        color: #fff;
+        font-size: 1.2rem;
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        transition: -webkit-transform 0.3s ease-in-out;
+    }
+
+    &:hover img {
+        opacity: 0.4;
+    }
+
 `
 const ItemFull = styled(Item)`
     grid-column-end: auto;
@@ -123,31 +130,41 @@ const ItemLarge = styled(Item)`
     grid-row-end: span 2;
 `;
 
+const navLinkStyle = {
+    textDecoration: 'none',
+    width: '100%', 
+    height: '100%'
+}
+
 const Works = () => ( 
     <Fragment>
         <CSSTransitionGroup 
-          transitionName="WorkTransition"
+          transitionName="Transition"
           transitionAppear={true}
-          transitionAppearTimeout={1000}
+          transitionAppearTimeout={5000}
           transitionEnter={true}
           transitionLeave={false} >
             <Main>
                 <Container>
                     <Grid>
+                        <ItemMedium>
+                            <NavLink to='/Detail/1' style={navLinkStyle}>
+                                <img src={Mealcheck} alt="profile" width="100%" height="100%" />
+                                <div>Mealcheck Program</div>
+                            </NavLink>
+                        </ItemMedium>
+                        
                         <Item>
-                            <img src={Koen} alt="profile" width="100%" height="100%"/>
+                            <NavLink to='/Detail/2' style={navLinkStyle}>
+                                <img src={Koen} alt="profile" width="100%" height="100%" />
+                                <div>Koen Mobile Project</div>
+                            </NavLink>
                         </Item>
                         <Item>
-                            <img src={Mealcheck} alt="profile" width="100%" height="100%"/>
-                        </Item>
-                        <Item>
-                            <img src={Memopad} alt="profile" width="100%" height="100%"/>
-                        </Item>
-                        <Item>
-                            <img src={Plant} alt="profile" width="100%" height="100%"/>
-                        </Item>
-                        <Item>
-                            <img src={Koen} alt="profile" width="100%" height="100%"/>
+                            <NavLink to='/Detail/3' style={navLinkStyle}>
+                                <img src={Plant} alt="profile" width="100%" height="100%" />
+                                <div>HanAra Insight</div>
+                            </NavLink>
                         </Item>
                     </Grid>
                 </Container>

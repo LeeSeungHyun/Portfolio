@@ -1,5 +1,6 @@
 import React from 'react'; 
 import { Link, NavLink } from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.div`
@@ -20,7 +21,6 @@ const PortfolioTitle = styled.div`
         color: rgba(0,0,0,1);
     }
 `
-
 const PortfolioMenu= styled.div`
     font-weight: 400;
     font-size: 16px;
@@ -37,6 +37,30 @@ const PortfolioMenu= styled.div`
 
     & > span:nth-child(1){
         margin-right: 16px;
+    }
+
+    // & > span:not(:last-child){
+    //     display: none;
+    // }
+
+    @media screen and (max-width: 767px) {
+        // .topnav.responsive {
+        //   position: relative;
+        // }
+        // .topnav.responsive .icon {
+        //   position: absolute;
+        //   right: 0;
+        //   top: 0;
+        // }
+        // .topnav.responsive a {
+        //   float: none;
+        //   display: block;
+        //   text-align: left;
+        // }
+
+        & > span::nth-child(1)){
+            display: none;
+        }
     }
 `
 
@@ -56,6 +80,7 @@ const Header = () => (
         <PortfolioMenu>
             <span><NavLink exact to="/" style={navLinkStyle} activeStyle={activeStyle}>Works</NavLink></span>
             <span><NavLink to="/about" style={navLinkStyle} activeStyle={activeStyle}>About</NavLink></span>
+            <span><i class="fa fa-bars"></i></span>
         </PortfolioMenu>
     </HeaderContainer>
 )

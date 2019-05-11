@@ -1,6 +1,5 @@
 import React from 'react'; 
 import { CSSTransitionGroup } from 'react-transition-group'
-import './About.css'
 import styled from 'styled-components';
 import profile from '../../assets/img/profile.jpg'; // Tell Webpack this JS file uses this image
 
@@ -50,9 +49,9 @@ const Container = styled.div`
 
 const About = () => ( 
     <CSSTransitionGroup
-        transitionName="AboutTransition"
+        transitionName="Transition"
         transitionAppear={true}
-        transitionAppearTimeout={1000}
+        transitionAppearTimeout={5000}
         transitionEnter={true}
         transitionLeave={false} >
       
