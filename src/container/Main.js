@@ -3,6 +3,10 @@ import { Route } from 'react-router-dom';
 import { Header, Works, About, Detail } from '../components';
 
 class Main extends Component { 
+
+    ReactCon() {
+        
+    }
     render() {
         return (
             <div>

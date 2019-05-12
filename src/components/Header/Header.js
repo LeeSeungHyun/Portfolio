@@ -1,69 +1,119 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
 import { Link, NavLink } from 'react-router-dom';
-import { CSSTransitionGroup } from 'react-transition-group';
+import { CSSTransitionGroup } from 'react-transition-group'
 import styled from 'styled-components';
 
-const HeaderContainer = styled.div`
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-`
-
-const PortfolioTitle = styled.div`
-    font-weight: 400;
-    font-size: 24px;
-    letter-spacing: .01em;
-    line-height: 2.2em;
-    text-transform: none;
-    padding-left: 20px;
-
-    & a {
-        color: rgba(0,0,0,1);
-    }
-`
 const PortfolioMenu= styled.div`
     font-weight: 400;
     font-size: 16px;
-    padding-top: 14px;
-    padding-right: 40px;
+    padding: 20px 40px;
 
-    & a {
+    & div:first-child a {
+        color: rgba(0,0,0,1);
+        font-size: 20px;
+    }
+
+    & div:not(:first-child) a {
         color: #B8B8B8;
     }
 
-    & a:hover {
+    & div:not(:first-child) a:hover {
         color: #000;
     }
 
-    & > span:nth-child(1){
-        margin-right: 16px;
+    & div:last-child a {
+        color: rgba(0,0,0,1);
+        font-size: 20px;
     }
 
-    // & > span:not(:last-child){
-    //     display: none;
-    // }
+    & > div {
+        text-align: left;
+    }
+
+    & > div:first-child{
+        float: left;
+    }
+
+    & > div:not(:first-child){
+        float: right;
+    }
+
+    & > div:last-child {
+        display: none;
+    }
+
+    &::after{
+        display: block;
+        clear: both;
+        content: '';
+    }
 
     @media screen and (max-width: 767px) {
-        // .topnav.responsive {
-        //   position: relative;
-        // }
-        // .topnav.responsive .icon {
-        //   position: absolute;
-        //   right: 0;
-        //   top: 0;
-        // }
-        // .topnav.responsive a {
-        //   float: none;
-        //   display: block;
-        //   text-align: left;
-        // }
+        position: relative;
+        padding: 20px 30px;
 
-        & > span::nth-child(1)){
+        & > div:first-child {
+            float: ${props => {
+                if(props.displayMenu) {
+                    return 'none';
+                }
+            }}
+        }
+
+        & > div:not(:first-child) {
             display: none;
+
+            display:  ${props => {
+                if(props.displayMenu) {
+                    return 'block';
+                }
+            }}
+
+            float: ${props => {
+                if(props.displayMenu) {
+                    return 'none';
+                }
+            }}
+        }
+
+        & > div:last-child {
+            float: right;
+            display: block;
+            position:${props => {
+                if(props.displayMenu) {
+                    return 'absolute';
+                }
+            }}
+
+            right:  ${props => {
+                if(props.displayMenu) {
+                    return 0;
+                }
+            }}
+
+            top:  ${props => {
+                if(props.displayMenu) {
+                    return 0;
+                }
+            }}
+
+            padding:  ${props => {
+                if(props.displayMenu) {
+                    return '20px 30px';
+                }
+            }}
+        }
+
+        & > div:nth-child(2),
+        & > div:nth-child(3) {
+            padding-top:  ${props => {
+                if(props.displayMenu) {
+                    return '10px';
+                }
+            }}
         }
     }
 `
-
 const navLinkStyle = {
     textDecoration: 'none'
 }
@@ -72,18 +122,46 @@ const activeStyle = {
     color: '#000',
 };
 
-const Header = () => ( 
-    <HeaderContainer>
-        <PortfolioTitle>
-            <span><NavLink exact to="/" style={navLinkStyle}>SEUNGHYUN</NavLink></span>
-        </PortfolioTitle>
-        <PortfolioMenu>
-            <span><NavLink exact to="/" style={navLinkStyle} activeStyle={activeStyle}>Works</NavLink></span>
-            <span><NavLink to="/about" style={navLinkStyle} activeStyle={activeStyle}>About</NavLink></span>
-            <span><i class="fa fa-bars"></i></span>
-        </PortfolioMenu>
-    </HeaderContainer>
-)
+class Header extends Component { 
+    constructor(props) {
+        super(props)
+        this.toggleMenu = this.toggleMenu.bind(this)
+    }
+
+    state = {
+        isDisplayMenu: false
+    }
+
+    toggleMenu() {
+        const { isDisplayMenu } = this.state;
+        if(isDisplayMenu){
+            this.setState({
+                isDisplayMenu : false
+            })
+        } else {
+            this.setState({
+                isDisplayMenu : true
+            })
+        }
+    }
+
+    render() {
+        const { isDisplayMenu } = this.state;
+        return (
+            <PortfolioMenu displayMenu = {isDisplayMenu}>
+                {/* <span><NavLink exact to="/" style={navLinkStyle}>SEUNGHYUN</NavLink></span> */}
+                <div><NavLink exact to="/">SEUNGHYUN</NavLink></div>
+                <div><NavLink to="/about" activeStyle={activeStyle}>About</NavLink></div>
+                <div><NavLink exact to="/" style={{marginRight: '10px'}}  activeStyle={activeStyle}>Works</NavLink></div>
+                <div>
+                    <a href='#' onClick={this.toggleMenu}>
+                        <i className="fa fa-bars"></i>
+                    </a>
+                </div>
+            </PortfolioMenu>
+        )
+    }
+}
 
 export default Header;
 
