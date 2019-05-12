@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Main from '../src/container/Main'
-import styled, { createGlobalStyle } from 'styled-components';
-import './App.css';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   .Transition-appear{
@@ -18,12 +17,10 @@ const GlobalStyle = createGlobalStyle`
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <BrowserRouter>
-          <GlobalStyle />
-          <Main />
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Main />
+      </BrowserRouter>
     );
   }
 }

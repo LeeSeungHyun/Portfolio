@@ -1,20 +1,21 @@
 import React,{Component} from 'react'; 
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 import { Header, Works, About, Detail } from '../components';
 
-class Main extends Component { 
+const MainContainer = styled.div`
+    min-width: 320px;
+`
 
-    ReactCon() {
-        
-    }
+class Main extends Component { 
     render() {
         return (
-            <div>
+            <MainContainer>
                 <Header />
                 <Route exact path="/" component={Works}/>
                 <Route path="/about" component={About}/>
                 <Route path="/Detail/:id" component={Detail}/>
-            </div>
+            </MainContainer>
         )
     }
 }

@@ -8,7 +8,6 @@ const contents = [];
 
 const Container = styled.div`
     padding: 20px 100px 50px 100px;
-    max-width: 1200px;
     margin: 32px auto;
     display: flex;
 

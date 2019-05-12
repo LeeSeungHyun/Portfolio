@@ -8,37 +8,37 @@ const PortfolioMenu= styled.div`
     font-size: 16px;
     padding: 20px 40px;
 
-    & div:first-child a {
+    & > a:first-child {
         color: rgba(0,0,0,1);
         font-size: 20px;
     }
 
-    & div:not(:first-child) a {
+    & a:not(:first-child) {
         color: #B8B8B8;
     }
 
-    & div:not(:first-child) a:hover {
+    & a:not(:first-child):hover {
         color: #000;
     }
 
-    & div:last-child a {
+    & a:last-child {
         color: rgba(0,0,0,1);
         font-size: 20px;
     }
 
-    & > div {
+    & > a {
         text-align: left;
     }
 
-    & > div:first-child{
+    & > a:first-child{
         float: left;
     }
 
-    & > div:not(:first-child){
+    & > a:not(:first-child){
         float: right;
     }
 
-    & > div:last-child {
+    & > a:last-child {
         display: none;
     }
 
@@ -52,15 +52,27 @@ const PortfolioMenu= styled.div`
         position: relative;
         padding: 20px 30px;
 
-        & > div:first-child {
+        & > a:first-child {
             float: ${props => {
                 if(props.displayMenu) {
                     return 'none';
                 }
             }}
+
+            display:  ${props => {
+                if(props.displayMenu) {
+                    return 'block';
+                }
+            }}
+
+            text-align:  ${props => {
+                if(props.displayMenu) {
+                    return 'left';
+                }
+            }}
         }
 
-        & > div:not(:first-child) {
+        & > a:not(:first-child) {
             display: none;
 
             display:  ${props => {
@@ -76,7 +88,7 @@ const PortfolioMenu= styled.div`
             }}
         }
 
-        & > div:last-child {
+        & > a:last-child {
             float: right;
             display: block;
             position:${props => {
@@ -104,8 +116,8 @@ const PortfolioMenu= styled.div`
             }}
         }
 
-        & > div:nth-child(2),
-        & > div:nth-child(3) {
+        & > a:nth-child(2),
+        & > a:nth-child(3) {
             padding-top:  ${props => {
                 if(props.displayMenu) {
                     return '10px';
@@ -149,15 +161,13 @@ class Header extends Component {
         const { isDisplayMenu } = this.state;
         return (
             <PortfolioMenu displayMenu = {isDisplayMenu}>
-                {/* <span><NavLink exact to="/" style={navLinkStyle}>SEUNGHYUN</NavLink></span> */}
-                <div><NavLink exact to="/">SEUNGHYUN</NavLink></div>
-                <div><NavLink to="/about" activeStyle={activeStyle}>About</NavLink></div>
-                <div><NavLink exact to="/" style={{marginRight: '10px'}}  activeStyle={activeStyle}>Works</NavLink></div>
-                <div>
-                    <a href='#' onClick={this.toggleMenu}>
-                        <i className="fa fa-bars"></i>
-                    </a>
-                </div>
+                <NavLink exact to="/">SEUNGHYUN</NavLink>
+                <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
+                <NavLink exact to="/" style={{marginRight: '10px'}}  activeStyle={activeStyle}>Works</NavLink>
+                
+                <a href='#' onClick={this.toggleMenu}>
+                    <i className="fa fa-bars"></i>
+                </a>
             </PortfolioMenu>
         )
     }
