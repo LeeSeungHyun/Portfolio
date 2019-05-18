@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/memopad-full.0779497f.png"
   },
   {
-    "revision": "188a673ecd9c139b1f74",
+    "revision": "3c617ffe049ace9d89f0",
     "url": "/Portfolio/static/css/main.34eeeef0.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/js/runtime~main.132fbc8c.js"
   },
   {
-    "revision": "c38df2483dcae5da1fb2",
-    "url": "/Portfolio/static/js/2.0e049917.chunk.js"
+    "revision": "2f137ccc5f170423eb5c",
+    "url": "/Portfolio/static/js/2.efbad2b0.chunk.js"
   },
   {
     "revision": "30079fadfbb32ded1fc0815ad25d2f02",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/mealcheck-full.073996a6.png"
   },
   {
-    "revision": "188a673ecd9c139b1f74",
-    "url": "/Portfolio/static/js/main.5005fa51.chunk.js"
+    "revision": "3c617ffe049ace9d89f0",
+    "url": "/Portfolio/static/js/main.92f7bdda.chunk.js"
   },
   {
     "revision": "b8280adcd4723369141b5207a629fb9c",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/Portfolio/static/media/ReneBieder.e8d8ebd2.otf"
   },
   {
-    "revision": "adf12f68ee864ef832eb933e9628afc5",
+    "revision": "a5baf3f353558fc5a91b6ddd5819f06d",
     "url": "/Portfolio/index.html"
   }
 ];
