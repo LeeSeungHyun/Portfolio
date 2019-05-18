@@ -26,10 +26,6 @@ const PortfolioMenu= styled.div`
         font-size: 20px;
     }
 
-    & > a {
-        text-align: left;
-    }
-
     & > a:first-child{
         float: left;
     }
@@ -42,6 +38,10 @@ const PortfolioMenu= styled.div`
         display: none;
     }
 
+    & > a:nth-child(3) {
+        margin-right: 10px;
+    }
+
     &::after{
         display: block;
         clear: both;
@@ -51,6 +51,10 @@ const PortfolioMenu= styled.div`
     @media screen and (max-width: 767px) {
         position: relative;
         padding: 20px 30px;
+
+        & > a:nth-child(3) {
+            margin-right: 0;
+        }
 
         & > a:first-child {
             float: ${props => {
@@ -74,7 +78,6 @@ const PortfolioMenu= styled.div`
 
         & > a:not(:first-child) {
             display: none;
-
             display:  ${props => {
                 if(props.displayMenu) {
                     return 'block';
@@ -116,11 +119,20 @@ const PortfolioMenu= styled.div`
             }}
         }
 
+        & > a:nth-child(2) {
+            margin-top:  ${props => {
+                if(props.displayMenu) {
+                    return '60px';
+                }
+            }}    
+        }
+
         & > a:nth-child(2),
         & > a:nth-child(3) {
-            padding-top:  ${props => {
+            text-align: center;
+            padding:  ${props => {
                 if(props.displayMenu) {
-                    return '10px';
+                    return '15px 10px';
                 }
             }}
         }
@@ -145,16 +157,19 @@ class Header extends Component {
     }
 
     toggleMenu() {
+        const { menuClick } = this.props;
         const { isDisplayMenu } = this.state;
         if(isDisplayMenu){
             this.setState({
                 isDisplayMenu : false
             })
+            menuClick(false);
         } else {
             this.setState({
                 isDisplayMenu : true
             })
-        }
+            menuClick(true);
+        }  
     }
 
     render() {
@@ -162,11 +177,11 @@ class Header extends Component {
         return (
             <PortfolioMenu displayMenu = {isDisplayMenu}>
                 <NavLink exact to="/">SEUNGHYUN</NavLink>
-                <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
-                <NavLink exact to="/" style={{marginRight: '10px'}}  activeStyle={activeStyle}>Works</NavLink>
+                <NavLink to="/about" onClick={this.toggleMenu} activeStyle={activeStyle}>About</NavLink>
+                <NavLink exact to="/" onClick={this.toggleMenu} activeStyle={activeStyle}>Works</NavLink>
                 
                 <a href='#' onClick={this.toggleMenu}>
-                    <i className="fa fa-bars"></i>
+                    {isDisplayMenu ? <i className="fa fa-close"></i> : <i className="fa fa-bars"></i>}
                 </a>
             </PortfolioMenu>
         )

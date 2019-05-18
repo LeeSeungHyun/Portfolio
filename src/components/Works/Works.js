@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { Link, NavLink } from 'react-router-dom';
@@ -21,6 +21,10 @@ const Main = styled.div`
     font-weight: 100;
     letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
+
+    @media screen and (max-width: 767px){
+        display:  ${props => props.isDisplayed ? 'none' : 'block'};
+    }
 `
 
 const Container = styled.div`
@@ -41,14 +45,6 @@ const Container = styled.div`
     letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
 
-    @media screen and (min-width: 768px) {
-        padding: 4rem;
-    }
-
-    @media screen and (max-width: 767px) {
-        padding: 2rem;
-    }
-
     @supports (display: grid) {
         display: block;
     }
@@ -57,10 +53,18 @@ const Container = styled.div`
 const Grid = styled.div`
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     grid-auto-rows: 300px;
     grid-auto-flow: row dense;
     line-height: 20px;
+
+    @media screen and (min-width: 768px) {
+        padding: 4rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        padding: 2rem;
+    }
 `;
 
 const Item = styled.div`
@@ -108,13 +112,14 @@ const Item = styled.div`
         font-weight: 900;
         z-index: 1;
         color: #fff;
-        font-size: 1.2rem;
-        -webkit-transition: -webkit-transform 0.3s ease-in-out;
-        transition: -webkit-transform 0.3s ease-in-out;
+        font-size: 1.1rem;
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+        transition: -webkit-transform 1s ease-in-out;
     }
 
     &:hover img {
-        opacity: 0.4;
+        opacity: 0.5;
+        transition: all 0.5s ease-in-out;
     }
 
 `
@@ -136,41 +141,51 @@ const navLinkStyle = {
     height: '100%'
 }
 
-const Works = () => ( 
-    <Fragment>
-        <CSSTransitionGroup 
-          transitionName="Transition"
-          transitionAppear={true}
-          transitionAppearTimeout={5000}
-          transitionEnter={true}
-          transitionLeave={false} >
-            <Main>
-                <Container>
-                    <Grid>
-                        <ItemMedium>
-                            <NavLink to='/Detail/1' style={navLinkStyle}>
-                                <img src={Mealcheck} alt="profile" width="100%" height="100%" />
-                                <div>Mealcheck Program</div>
-                            </NavLink>
-                        </ItemMedium>
-                        
-                        <Item>
-                            <NavLink to='/Detail/2' style={navLinkStyle}>
-                                <img src={Koen} alt="profile" width="100%" height="100%" />
-                                <div>Koen Mobile Project</div>
-                            </NavLink>
-                        </Item>
-                        <Item>
-                            <NavLink to='/Detail/3' style={navLinkStyle}>
-                                <img src={Plant} alt="profile" width="100%" height="100%" />
-                                <div>HanAra Insight</div>
-                            </NavLink>
-                        </Item>
-                    </Grid>
-                </Container>
-            </Main>
-        </CSSTransitionGroup>
-    </Fragment>
-) 
+
+class Works extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const { isDisplayed } = this.props;
+        return(
+            <Fragment>
+                <CSSTransitionGroup 
+                transitionName="Transition"
+                transitionAppear={true}
+                transitionAppearTimeout={5000}
+                transitionEnter={true}
+                transitionLeave={false} >
+                    <Main isDisplayed = {isDisplayed}>
+                        <Container>
+                            <Grid>
+                                <ItemMedium>
+                                    <NavLink to='/Detail/1' style={navLinkStyle}>
+                                        <img src={Mealcheck} alt="profile" width="100%" height="100%" />
+                                        <div>Meal Check</div>
+                                    </NavLink>
+                                </ItemMedium>
+                                
+                                <Item>
+                                    <NavLink to='/Detail/2' style={navLinkStyle}>
+                                        <img src={Koen} alt="profile" width="100%" height="100%" />
+                                        <div>Koen Mobile</div>
+                                    </NavLink>
+                                </Item>
+                                <Item>
+                                    <NavLink to='/Detail/3' style={navLinkStyle}>
+                                        <img src={Plant} alt="profile" width="100%" height="100%" />
+                                        <div>HanAra Insight</div>
+                                    </NavLink>
+                                </Item>
+                            </Grid>
+                        </Container>
+                    </Main>
+                </CSSTransitionGroup>
+            </Fragment>
+        )
+    }
+} 
 
 export default Works;

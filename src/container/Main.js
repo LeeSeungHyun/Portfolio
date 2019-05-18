@@ -8,13 +8,32 @@ const MainContainer = styled.div`
 `
 
 class Main extends Component { 
+    constructor(props){
+        super(props);
+        this.menuClickEvent = this.menuClickEvent.bind(this)
+    }
+    
+    state = {
+        isDisplayed: false
+    }
+
+    menuClickEvent(isDisplayed) {
+        this.setState({
+            isDisplayed : isDisplayed
+        })
+    }
+
     render() {
+        const { isDisplayed }  = this.state;
         return (
             <MainContainer>
-                <Header />
-                <Route exact path="/" component={Works}/>
-                <Route path="/about" component={About}/>
-                <Route path="/Detail/:id" component={Detail}/>
+                <Header menuClick={this.menuClickEvent}/>
+                {/* <Route exact path="/"  component={Works} />
+                <Route path="/about" component={About} /> */}
+                {/* <Route path="/Detail/:id" component={Detail} isDisplayed={isDisplayed}/> */}
+                <Route path="/Detail/:id"  render={(props) => <Detail {...props} isDisplayed={isDisplayed}/>} />
+                <Route exact path="/" render={() => <Works isDisplayed={isDisplayed}/>} />
+                <Route path="/about" render={() => <About isDisplayed={isDisplayed}/>} />
             </MainContainer>
         )
     }

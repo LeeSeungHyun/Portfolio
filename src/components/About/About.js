@@ -1,10 +1,10 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
 import { CSSTransitionGroup } from 'react-transition-group'
 import styled from 'styled-components';
 import profile from '../../assets/img/profile.jpg'; // Tell Webpack this JS file uses this image
 
 const Container = styled.div`
-    padding: 20px 100px 50px 100px;
+    padding: 20px 200px 50px 100px;
     margin: 32px auto;
     display: flex;
 
@@ -31,13 +31,10 @@ const Container = styled.div`
         margin-top: 2px;
     }
 
-    & p:nth-last-child(1) {
-        margin-top: 30px;
-        font-style: italic;
-    }
-
+    transition: visibility 0s, opacity 0.5s linear;
     @media screen and (max-width: 767px){
-        display: block;
+        display:  ${props => props.isDisplayed ? 'none' : 'block'};
+        
         padding: 20px 30px 50px 30px;
         & > div:nth-child(2) {
             margin-left: 0;
@@ -46,34 +43,36 @@ const Container = styled.div`
     }
 `
 
-const About = () => ( 
-    <CSSTransitionGroup
-        transitionName="Transition"
-        transitionAppear={true}
-        transitionAppearTimeout={5000}
-        transitionEnter={true}
-        transitionLeave={false} >
-      
-        <Container>
-            <div>
-                <img src={profile} alt="profile"/>
-            </div>
-            <div>
-                <p>
-                    웹 개발에 관심이 많고, 현재는 주로 React를 이용해 개발을 하고 있습니다.
-                </p>
-                <p>
-                    남는 시간에 개발 공부를 하고, 새로운 기술을 익히면서 즐거움을 느끼고 있습니다.
-                </p>
-                <p>
-                    단순히 일하는 사람이 아닌 새로운 것을 배우면서 내가 성장하고 도움이 필요한 사람에게 도움이 될 수 있도록 하는 것이 저의 개발자로서 목표입니다
-                </p>
-                <p>
-                    Html, css, Javascript, angular, nodejs, react, react-native
-                </p>
-            </div>
-        </Container>
-    </CSSTransitionGroup>
-) 
+class About extends Component {
+    render() {
+        const { isDisplayed } = this.props;
+        return ( 
+            <CSSTransitionGroup
+                transitionName="Transition"
+                transitionAppear={true}
+                transitionAppearTimeout={5000}
+                transitionEnter={true}
+                transitionLeave={false} >
+              
+                <Container  isDisplayed = {isDisplayed}>
+                    <div>
+                        <img src={profile} alt="profile"/>
+                    </div>
+                    <div>
+                        <p>안녕하세요 웹 개발자 이승현입니다. 약 4년간 직장생활을 하고 있고, 현재 성남에서 거주하고 있습니다. </p>
+                        <p>
+                            누군가에게는 꼭 필요한 서비스가 있습니다. 하지만 문제를 해결하기 위해서는 어떠한 기술이 필요하죠. 
+                            개발자는 필요로 하는 사람들에게 서비스를 제공해 줄 수 있는 매력적인 직업중에 하나라고 생각됩니다. 
+                            누군가에게 도움이 된다는 것은 너무나도 즐거운 일입니다. 
+                        </p>
+                        <p>
+                            저도 도움이 되는 그런 사람이 되고 싶습니다. :)
+                        </p>
+                    </div>
+                </Container>
+            </CSSTransitionGroup>
+        ) 
+    }
+} 
 
 export default About;
