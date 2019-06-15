@@ -39,6 +39,7 @@ const Container = styled.div`
         padding: 20px 30px 50px 30px;
         & > div:nth-child(2) {
             margin-left: 0;
+            margin-right: 0;
             margin-top: 30px;
         }
     }
