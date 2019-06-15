@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/plant-full.b8280adc.png"
   },
   {
-    "revision": "e7b174266578987aa3d3",
+    "revision": "04cd8be0da2f0e4e1083",
     "url": "/portfolio/static/css/main.cb965ab1.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/memopad-full.0779497f.png"
   },
   {
-    "revision": "e7b174266578987aa3d3",
-    "url": "/portfolio/static/js/main.116f2274.chunk.js"
+    "revision": "04cd8be0da2f0e4e1083",
+    "url": "/portfolio/static/js/main.1f271595.chunk.js"
   },
   {
     "revision": "60a9cca470a517bab4fb7e07751c9f6e",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/NotoSansCJKkr-Regular.19b7d8d4.otf"
   },
   {
-    "revision": "9dc7f749e0e97f616bddc1682fc527cf",
+    "revision": "9d5d6f8029d0ea162799937edbbc011d",
     "url": "/portfolio/index.html"
   }
 ];
