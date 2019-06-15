@@ -7,13 +7,15 @@ const PortfolioMenu= styled.div`
     font-weight: 400;
     font-size: 16px;
     padding: 20px 40px;
-
+   
     & > a:first-child {
+        font-family: 'wonoland' !important;
         color: rgba(0,0,0,1);
-        font-size: 20px;
+        font-size: 24px;
     }
 
     & a:not(:first-child) {
+        font-family: 'Galano' !important;
         color: #B8B8B8;
     }
 

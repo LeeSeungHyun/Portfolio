@@ -1,16 +1,30 @@
 @font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/NotoSansCJKkr-Regular.otf'); 
+}
+
+@font-face {
+  font-family: 'wonoland';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/Wonoland Park.otf'); 
+}
+
+@font-face {
   font-family: 'Galano';
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/font/ReneBiederAlt.otf');
-  src: url('./assets/font/ReneBieder.otf');
+  src: url('./assets/font/ReneBieder.otf'); 
+  src: url('./assets/font/ReneBiederAlt.otf'); 
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Galano' !important;
-  color: rgba(0,0,0,.53);
+  font-family: 'NotoSans' !important;
+  background-color: #fafafa;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }

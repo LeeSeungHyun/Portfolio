@@ -11,7 +11,7 @@
     "react-transition-group": "^1.2.1",
     "styled-components": "^4.2.0"
   },
-  "homepage": "https://leeseunghyun.github.io/Portfolio",
+  "homepage": "https://leeseunghyun.github.io/portfolio",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

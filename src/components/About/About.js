@@ -9,12 +9,13 @@ const Container = styled.div`
     display: flex;
 
     & > div:nth-child(1) {
-        flex: 1;
+        flex: 2;
     }
 
     & > div:nth-child(2) {
-        flex: 2;
+        flex: 3;
         margin-left: 40px;
+        margin-right: 100px;
         line-height: 2em;
     }
 
