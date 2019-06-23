@@ -40,8 +40,10 @@ const PortfolioMenu= styled.div`
         display: none;
     }
 
-    & > a:nth-child(3) {
-        margin-right: 10px;
+    & > a:nth-child(2),
+    & > a:nth-child(3),
+    & > a:nth-child(4) {
+        margin-right: 16px;
     }
 
     &::after{
@@ -54,7 +56,7 @@ const PortfolioMenu= styled.div`
         position: relative;
         padding: 20px 30px;
 
-        & > a:nth-child(3) {
+        & > a:nth-child(5) {
             margin-right: 0;
         }
 
@@ -130,7 +132,8 @@ const PortfolioMenu= styled.div`
         }
 
         & > a:nth-child(2),
-        & > a:nth-child(3) {
+        & > a:nth-child(3),
+        & > a:nth-child(4) {
             text-align: center;
             padding:  ${props => {
                 if(props.displayMenu) {
@@ -140,9 +143,6 @@ const PortfolioMenu= styled.div`
         }
     }
 `
-const navLinkStyle = {
-    textDecoration: 'none'
-}
 
 const activeStyle = {
     color: '#000',
@@ -181,6 +181,7 @@ class Header extends Component {
                 <NavLink exact to="/">SEUNGHYUN</NavLink>
                 <NavLink to="/about" onClick={this.toggleMenu} activeStyle={activeStyle}>About</NavLink>
                 <NavLink exact to="/" onClick={this.toggleMenu} activeStyle={activeStyle}>Works</NavLink>
+                <a href='https://leeseunghyun.github.io/main' style={activeStyle}>Main</a>
                 
                 <a href='#' onClick={this.toggleMenu}>
                     {isDisplayMenu ? <i className="fa fa-close"></i> : <i className="fa fa-bars"></i>}
