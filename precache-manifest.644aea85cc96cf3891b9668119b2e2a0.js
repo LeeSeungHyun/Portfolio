@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "b8280adcd4723369141b5207a629fb9c",
-    "url": "/portfolio/static/media/plant-full.b8280adc.png"
+    "revision": "60a9cca470a517bab4fb7e07751c9f6e",
+    "url": "/portfolio/static/media/profile.60a9cca4.jpg"
   },
   {
-    "revision": "799fbd0b8e6cb6583202",
-    "url": "/portfolio/static/css/main.cb965ab1.chunk.css"
+    "revision": "cc25ed07545f9a3d9248",
+    "url": "/portfolio/static/css/main.927547cc.chunk.css"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "5f16cc55d4a143461e84",
-    "url": "/portfolio/static/js/2.b19b1d74.chunk.js"
+    "revision": "412fa2e2dd539da9d010",
+    "url": "/portfolio/static/js/2.b51666e0.chunk.js"
   },
   {
     "revision": "30079fadfbb32ded1fc0815ad25d2f02",
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/memopad-full.0779497f.png"
   },
   {
-    "revision": "799fbd0b8e6cb6583202",
-    "url": "/portfolio/static/js/main.003fb82b.chunk.js"
+    "revision": "b8280adcd4723369141b5207a629fb9c",
+    "url": "/portfolio/static/media/plant-full.b8280adc.png"
   },
   {
-    "revision": "60a9cca470a517bab4fb7e07751c9f6e",
-    "url": "/portfolio/static/media/profile.60a9cca4.jpg"
+    "revision": "cc25ed07545f9a3d9248",
+    "url": "/portfolio/static/js/main.296fa71d.chunk.js"
   },
   {
     "revision": "f7cf5b76664ae6631c1d5fa15d8d73b8",
@@ -44,15 +44,23 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/ReneBieder.e8d8ebd2.otf"
   },
   {
+    "revision": "926a08fb27e3303c7452b0bdd2d5e5ab",
+    "url": "/portfolio/static/media/ProximaNova-Bold.926a08fb.ttf"
+  },
+  {
     "revision": "91c099c1bacde15fc705913d32381fd6",
     "url": "/portfolio/static/media/ReneBiederAlt.91c099c1.otf"
+  },
+  {
+    "revision": "4a3961960c6827bf176eb0ef73653784",
+    "url": "/portfolio/static/media/ProximaNovaT-Thin.4a396196.ttf"
   },
   {
     "revision": "19b7d8d4011e8f88930022704558246d",
     "url": "/portfolio/static/media/NotoSansCJKkr-Regular.19b7d8d4.otf"
   },
   {
-    "revision": "b8f24d4c4348d6f9ecc4ae9d413d09dc",
+    "revision": "172c38db537b88221e5413f2d8f5ce43",
     "url": "/portfolio/index.html"
   }
 ];
