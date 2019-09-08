@@ -22,7 +22,7 @@ URL : <a href="http://meal.bnftech.com" target="_blank">meal.bnftech.com</a></p>
 ];
 
 const Container = styled.div`
-    padding: 20px 200px 50px 100px;
+    padding: 20px 50px 50px 50px;
     margin: 32px auto;
     display: flex;
 

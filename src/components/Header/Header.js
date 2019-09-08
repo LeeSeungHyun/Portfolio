@@ -2,20 +2,24 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group'
 import styled from 'styled-components';
+import { brotliDecompress } from 'zlib';
 
 const PortfolioMenu= styled.div`
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
-    padding: 20px 40px;
+    padding: 100px 40px 40px 40px;
    
     & > a:first-child {
-        font-family: 'wonoland' !important;
+        font-family: 'ProximaNova-Bold' !important;
         color: rgba(0,0,0,1);
-        font-size: 24px;
+        letter-spacing: 1px;
+        font-size: 32px;
     }
 
     & a:not(:first-child) {
-        font-family: 'Galano' !important;
+        font-family: 'ProximaNovaT-Thin' !important;
+        font-weight: 400;
+        letter-spacing: 1px;
         color: #B8B8B8;
     }
 
@@ -54,7 +58,7 @@ const PortfolioMenu= styled.div`
 
     @media screen and (max-width: 767px) {
         position: relative;
-        padding: 20px 30px;
+        padding: 40px 30px;
 
         & > a:nth-child(5) {
             margin-right: 0;
@@ -146,6 +150,7 @@ const PortfolioMenu= styled.div`
 
 const activeStyle = {
     color: '#000',
+    fontWeight: 'bold'
 };
 
 class Header extends Component { 
@@ -181,7 +186,7 @@ class Header extends Component {
                 <NavLink exact to="/">SEUNGHYUN</NavLink>
                 <NavLink to="/about" onClick={this.toggleMenu} activeStyle={activeStyle}>About</NavLink>
                 <NavLink exact to="/" onClick={this.toggleMenu} activeStyle={activeStyle}>Works</NavLink>
-                <a href='https://leeseunghyun.github.io/main' style={activeStyle}>Main</a>
+                <a href='https://leeseunghyun.github.io/main'>Main</a>
                 
                 <a href='#' onClick={this.toggleMenu}>
                     {isDisplayMenu ? <i className="fa fa-close"></i> : <i className="fa fa-bars"></i>}

@@ -20,18 +20,35 @@
   src: url('./assets/font/ReneBiederAlt.otf'); 
 }
 
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/font/ProximaNova-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'ProximaNovaT-Thin';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/font/ProximaNovaT-Thin.ttf');
+}
+
 body {
   margin: 0;
   padding: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  /* font-family: 'NotoSans' !important; */
   font-family: 'NotoSans' !important;
-  background-color: #fafafa;
+  background-color: #fcfcfc;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
 a {

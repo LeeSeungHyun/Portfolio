@@ -52,14 +52,14 @@ const Container = styled.div`
 
 const Grid = styled.div`
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-    grid-auto-rows: 300px;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 320px;
     grid-auto-flow: row dense;
-    line-height: 20px;
+    line-height: 30px;
 
     @media screen and (min-width: 768px) {
-        padding: 4rem;
+        padding: 3rem;
     }
 
     @media screen and (max-width: 767px) {
@@ -86,8 +86,8 @@ const Item = styled.div`
     color: #fff;
     background-size: cover;
     background-position: center;
-    box-shadow: -1px 1px 5px 0px rgba(200, 200, 200, 0.4);
-    -webkit-box-shadow: -1px 1px 5px 0px rgba(200, 200, 200, 0.4);
+    box-shadow: -1px 1px 2px 0px rgba(200, 200, 200, 0.4);
+    -webkit-box-shadow: -1px 1px 2px 0px rgba(200, 200, 200, 0.4);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: -webkit-transform 0.3s ease-in-out;
     cursor: pointer;
@@ -166,7 +166,6 @@ class Works extends Component {
                                         <div>Meal Check</div>
                                     </NavLink>
                                 </ItemMedium>
-                                
                                 <Item>
                                     <NavLink to='/Detail/2' style={navLinkStyle}>
                                         <img src={Koen} alt="profile" width="100%" height="100%" />

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import profile from '../../assets/img/profile.jpg'; // Tell Webpack this JS file uses this image
 
 const Container = styled.div`
-    padding: 20px 200px 50px 100px;
+    padding: 20px 100px 50px 50px;
     margin: 32px auto;
     display: flex;
 
