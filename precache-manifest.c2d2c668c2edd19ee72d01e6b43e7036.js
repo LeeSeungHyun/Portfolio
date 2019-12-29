@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/profile.80250e78.jpg"
   },
   {
-    "revision": "8b7417f4a8a7ae7732b8",
+    "revision": "a6aaa5c022a108d89758",
     "url": "/portfolio/static/css/main.927547cc.chunk.css"
   },
   {
@@ -32,16 +32,16 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/plant-full.b8280adc.png"
   },
   {
-    "revision": "8b7417f4a8a7ae7732b8",
-    "url": "/portfolio/static/js/main.6d5efe51.chunk.js"
-  },
-  {
-    "revision": "f7cf5b76664ae6631c1d5fa15d8d73b8",
-    "url": "/portfolio/static/media/Wonoland Park.f7cf5b76.otf"
+    "revision": "a6aaa5c022a108d89758",
+    "url": "/portfolio/static/js/main.22b80e57.chunk.js"
   },
   {
     "revision": "e8d8ebd2b2a6d9b2006135cfffad5210",
     "url": "/portfolio/static/media/ReneBieder.e8d8ebd2.otf"
+  },
+  {
+    "revision": "f7cf5b76664ae6631c1d5fa15d8d73b8",
+    "url": "/portfolio/static/media/Wonoland Park.f7cf5b76.otf"
   },
   {
     "revision": "926a08fb27e3303c7452b0bdd2d5e5ab",
@@ -60,7 +60,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/NotoSansCJKkr-Regular.19b7d8d4.otf"
   },
   {
-    "revision": "6815981d575c3d262bc567271c93f073",
+    "revision": "8e27f2fd5520aac66fbb066fc6a97aef",
     "url": "/portfolio/index.html"
   }
 ];
