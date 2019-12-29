@@ -5,23 +5,6 @@ import { Link, NavLink } from 'react-router-dom';
 import { Koen, Mealcheck, Plant}  from '../../assets/img';
 
 const Main = styled.div`
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    font-size: 13px;
-    font-weight: 100;
-    letter-spacing: 1px;
-    font-family: 'Roboto', sans-serif;
-
     @media screen and (max-width: 767px){
         display:  ${props => props.isDisplayed ? 'none' : 'block'};
     }
@@ -51,10 +34,13 @@ const Container = styled.div`
 `;
 
 const Grid = styled.div`
+    display: -ms-grid;
     display: grid;
     grid-gap: 50px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-auto-rows: 320px;
+    -ms-grid-rows: 320px 320px 320px;
     grid-auto-flow: row dense;
     line-height: 30px;
 
@@ -64,6 +50,22 @@ const Grid = styled.div`
 
     @media screen and (max-width: 767px) {
         padding: 2rem;
+    }
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        & > div:nth-child(1) {
+            -ms-grid-row:1; -ms-grid-column:1;
+            margin-right: 30px;
+        }
+    
+        & > div:nth-child(2) {
+            -ms-grid-row:1; -ms-grid-column:2;
+            margin-right: 30px;
+        }
+    
+        & > div:nth-child(3) {
+            -ms-grid-row:1; -ms-grid-column:3;
+        }
     }
 `;
 
