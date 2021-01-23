@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import styled from 'styled-components';
 import { CSSTransitionGroup } from 'react-transition-group';
 import { Link, NavLink } from 'react-router-dom';
-import { Koen, Mealcheck, Plant}  from '../../assets/img';
+import { Koen, Mealcheck, Plant, BookFishing }  from '../../assets/img';
 
 const Main = styled.div`
     @media screen and (max-width: 767px){
@@ -178,6 +178,12 @@ class Works extends Component {
                                     <NavLink to='/Detail/3' style={navLinkStyle}>
                                         <img src={Plant} alt="profile" width="100%" height="100%" />
                                         <div>HanAra Insight</div>
+                                    </NavLink>
+                                </Item>
+                                <Item>
+                                    <NavLink to='/Detail/4' style={navLinkStyle}>
+                                        <img src={BookFishing} alt="profile" width="100%" height="100%" />
+                                        <div>Book Fishing</div>
                                     </NavLink>
                                 </Item>
                             </Grid>

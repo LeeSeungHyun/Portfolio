@@ -1,8 +1,6 @@
 import React, { Component } from 'react'; 
-import { Link, NavLink } from 'react-router-dom';
-import { CSSTransitionGroup } from 'react-transition-group'
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { brotliDecompress } from 'zlib';
 
 const PortfolioMenu= styled.div`
     font-weight: 500;
@@ -110,13 +108,13 @@ const PortfolioMenu= styled.div`
 
             right:  ${props => {
                 if(props.displayMenu) {
-                    return 0;
+                    return '0';
                 }
             }}
 
             top:  ${props => {
                 if(props.displayMenu) {
-                    return 0;
+                    return '18px';
                 }
             }}
 
