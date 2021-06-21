@@ -149,6 +149,10 @@ class Works extends Component {
         super(props);
     }
 
+    openModal () {
+        alert(1234)
+    }
+
     render() {
         const { isDisplayed } = this.props;
         return(
@@ -163,25 +167,30 @@ class Works extends Component {
                         <Container>
                             <Grid>
                                 <ItemMedium>
-                                    <NavLink to='/Detail/1' style={navLinkStyle}>
+                                    {/* <NavLink to='/Detail/1' style={navLinkStyle}>
+                                        <img src={Mealcheck} alt="profile" width="100%" height="100%" />
+                                        <div>Meal Check</div>
+                                    </NavLink> */}
+                                    <NavLink onClick={this.openModal} style={navLinkStyle}>
                                         <img src={Mealcheck} alt="profile" width="100%" height="100%" />
                                         <div>Meal Check</div>
                                     </NavLink>
+                                      
                                 </ItemMedium>
                                 <Item>
-                                    <NavLink to='/Detail/2' style={navLinkStyle}>
+                                    <NavLink onClick={this.openModal} style={navLinkStyle}>
                                         <img src={Koen} alt="profile" width="100%" height="100%" />
                                         <div>Koen Mobile</div>
                                     </NavLink>
                                 </Item>
                                 <Item>
-                                    <NavLink to='/Detail/3' style={navLinkStyle}>
+                                    <NavLink onClick={this.openModal} style={navLinkStyle}>
                                         <img src={Plant} alt="profile" width="100%" height="100%" />
                                         <div>HanAra Insight</div>
                                     </NavLink>
                                 </Item>
                                 <Item>
-                                    <NavLink to='/Detail/4' style={navLinkStyle}>
+                                    <NavLink onClick={this.openModal} style={navLinkStyle}>
                                         <img src={BookFishing} alt="profile" width="100%" height="100%" />
                                         <div>Book Fishing</div>
                                     </NavLink>
