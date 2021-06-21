@@ -22,7 +22,7 @@ URL : <a href="http://meal.bnftech.com" target="_blank">meal.bnftech.com</a></p>
 
 `<p>노마드코더 유튜브 체널에서 주최한 책 SNS 만들기 공모전에 참여했었습니다.</p>
 <p>Social 로그인 기능 (facebook, google), 프로필, 책 리스트, 책 검색, Kakao Book API를 이용한 책 등록하기, 댓글 등등 기능을 구현 하였습니다.
-제작 기간은 2달이었고, 프론트엔드부터 백엔드, 배포까지 혼자 모든 부분을 구현하였습니다. URL : <a href="https://bookfishing.netlify.com" 
+제작 기간은 2달이었고, 프론트엔드부터 백엔드, 배포까지 혼자 모든 부분을 구현하였습니다. URL : <a href="https://bookfishing.site" 
 target="_blank">https://bookfishing.site</a></p>
 <p>사용기술: javascript(es6), Vue, Node.js, Heroku</p>`
 ];
