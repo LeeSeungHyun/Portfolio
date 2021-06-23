@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "3c9053d5476fba0c85b8",
+    "revision": "2f148b26cd49a9a3b491",
     "url": "/portfolio/static/css/main.5438fbc7.chunk.css"
   },
   {
-    "revision": "3c9053d5476fba0c85b8",
-    "url": "/portfolio/static/js/main.0abb1921.chunk.js"
+    "revision": "2f148b26cd49a9a3b491",
+    "url": "/portfolio/static/js/main.05a94060.chunk.js"
   },
   {
     "revision": "53ebc025fca807d4dbea",
     "url": "/portfolio/static/js/runtime~main.f308c8e6.js"
   },
   {
-    "revision": "2541a946c5485e9c3208",
-    "url": "/portfolio/static/js/2.9c139919.chunk.js"
+    "revision": "5f8cfc1c3b856102b240",
+    "url": "/portfolio/static/js/2.30e5e3a2.chunk.js"
   },
   {
     "revision": "30079fadfbb32ded1fc0815ad25d2f02",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/Wonoland Park.f7cf5b76.otf"
   },
   {
-    "revision": "e8d8ebd2b2a6d9b2006135cfffad5210",
-    "url": "/portfolio/static/media/ReneBieder.e8d8ebd2.otf"
-  },
-  {
     "revision": "91c099c1bacde15fc705913d32381fd6",
     "url": "/portfolio/static/media/ReneBiederAlt.91c099c1.otf"
+  },
+  {
+    "revision": "e8d8ebd2b2a6d9b2006135cfffad5210",
+    "url": "/portfolio/static/media/ReneBieder.e8d8ebd2.otf"
   },
   {
     "revision": "926a08fb27e3303c7452b0bdd2d5e5ab",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/NotoSansCJKkr-Regular.19b7d8d4.otf"
   },
   {
-    "revision": "43f7cf4c6da3beaeb2290556d5b56119",
+    "revision": "b956c0fe3c261d15937e7a4239d7fc71",
     "url": "/portfolio/index.html"
   }
 ];
