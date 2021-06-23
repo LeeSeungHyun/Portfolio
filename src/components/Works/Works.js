@@ -6,27 +6,48 @@ import { Koen, Mealcheck, Plant, BookFishing }  from '../../assets/img';
 import Modal from 'react-modal';
 
 const images = [ Mealcheck, Koen, Plant, BookFishing ];
-const contents = [`<p>회사에서 중식 이용시 외부업체를 이용하였습니다.</p> <p>프로그램을 만들기 전에는 식단표에다 식사신청을 직접해야 했지만,
-개발 후 휴대폰, PC를 이용해서 간단하게 식사신청을 할 수 있게 되었습니다.</<p> <p>기능은 식사 신청, 월별 식사 신청 수 확인, 프로필 수정,
-주간, 월간 리포트 등등 있고, 저와 베트남 개발자 한 분과 같이 제작하였습니다. <p/>
-<p>기획 부터 프론트앤드, 백엔드, 배포까지 전체적인 웹 개발 과정을 경험한 개인적으로 기억에 많이 남는 프로젝트 입니다.
-URL : <a href="http://meal.bnftech.com" target="_blank">meal.bnftech.com</a></p>
-<p>사용기술: C#, Asp.Net MVC5, Bootstrap, Html, Css, Javascript</p>`,
+const contents = [
+	`<h2>Meal Check 프로그램(<a href="http://meal.bnftech.com" target="_blank">http://meal.bnftech.com</a>)</h2>
+	<p>사내 식사 신청 및 관리 프로그램 개발 (2016.02 ~ 2016.05)</p>
+	<ul>
+		<li>식사 신청</li>
+		<li>그 달의 식사 신청 개수 확인</li>
+		<li>관리자 주간, 월간 리포트</li>
+		<li>식단표 업데이트</li>
+		<li>공제 금액확인 기능 개발</li>
+	</ul>
+	<p>사용기술: C#, Asp.Net MVC5, Bootstrap</p>`,
 
-`<p>(주)한국남동발전과 진행했던 프로젝트입니다.</p><p>수집한 발전소의 데이터를 시각적으로 모바일 화면을 통해서도 볼 수 있게
-되었습니다. 프로그램 사용 유저, 기능 사용 통계, Tag정보 관리, 공지사항 등록을 관리하는 Web admin 프로그램을 개발하였습니다.</p>
-<p>사용기술: Java, Spring Framework, Html, Css, Angular.js</p>`,
+	`<h2>발전 운전 정보 모바일시스템 (주)한국남동발전</h2>
+	<p>Web Admin 개발 (2016.09 ~ 2017.05)</p>
+	<ul>
+		<li>태그 관리</li>
+		<li>사용 통계</li>
+		<li>유저 관리</li>
+		<li>공지사항 기능 구현</li>
+		<li>Secure coding을 통한 보안 이슈 처리</li>
+	</ul>
+	<p>사용기술: Spring Framework, Angular.js</p>`,
 
-`<p>회사에서 제품개발 계획에 따라, Web기반으로 발전소 데이터 감시 프로그램을 제작하였습니다.</p>
-<p>태그(발전소 데이터 신호) 정보를 관리하는 페이지, 공정화면 모니터링, 차트 관리 페이지 기능 구현을 하였고,
-전체적인 웹 페이지 레이아웃 제작도 같이 하였습니다.</p>
-<p>사용기술: javascript(es6), typescript, angular, Asp.net API</p>`,
+	`<h2>HanAra Insight</h2>
+	<p>Web기반 발전소 상태 모니터링 프로그램 개발<br />(2018.02 ~ 2019.03)</p>
+	<ul>
+		<li>Tag Information</li>
+		<li>Chart management</li>
+		<li>Mimic 프로그램 Front-end 개발</li>
+		<li>Angular Material Design을 이용한 웹 퍼블리싱</li>
+	</ul>
+	<p>사용기술: javascript(es6), typescript, angular, Asp.net API</p>`,
 
-`<p>노마드코더 유튜브 체널에서 주최한 책 SNS 만들기 공모전에 참여했었습니다.</p>
-<p>Social 로그인 기능 (facebook, google), 프로필, 책 리스트, 책 검색, Kakao Book API를 이용한 책 등록하기, 댓글 등등 기능을 구현 하였습니다.
-제작 기간은 2달이었고, 프론트엔드부터 백엔드, 배포까지 혼자 모든 부분을 구현하였습니다. URL : <a href="https://bookfishing.site" 
-target="_blank">https://bookfishing.site</a></p>
-<p>사용기술: javascript(es6), Vue, Node.js, Heroku</p>`
+	`<h2>책 SNS 사이트(<a href="https://bookfishing.site" target="_blank">https://bookfishing.site</a>)</h2>
+	<p>유투브 노마드코더에서 주최한 해커톤 대회<br />(2020.02 ~ 2020.04)</p>
+	<ul>
+		<li>Social 로그인 기능 (facebook, google)</li>
+		<li>프로필, 책 리스트, 책 검색</li>
+		<li>Kakao Book API를 이용한 책 등록하기</li>
+		<li>댓글 등등</li>
+	</ul>
+	<p>사용 기술: javascript(es6), Vue, Node.js, Heroku</p>`
 ];
 
 Modal.setAppElement('#root')
@@ -182,7 +203,6 @@ const CloseModalBtn = styled.div`
 
 const ModalContainer = styled.div`
 	display: flex;
-	height: 400px;
 
 	& > div:nth-child(1), div:nth-child(3){
 		width: 50px;
@@ -204,12 +224,13 @@ const ModalContainer = styled.div`
 
 const DetailContainer = styled.div`
 	display: flex;
-	padding: 20px 50px 50px 50px;
-    margin: 32px auto;
+	justify-content: center;
+	align-items: center;
+	height: 400px;
 
 	& > div:nth-child(1) {
-		width: 200px;
-		margin-right: 30px;
+		width: 220px;
+		padding: 20px;
 		& > img {
 			width: 100%;
 		}
@@ -217,6 +238,7 @@ const DetailContainer = styled.div`
 
 	& > div:nth-child(2) {
 		flex: 1;
+		padding: 20px;
 	}
 `
 
@@ -235,7 +257,7 @@ const customStyles = {
 		right: 'auto',
 		bottom: 'auto',
 		marginRight: '-50%',
-		width: '800px',
+		width: '724px',
 		height: '400px',
 		padding: '30px',
 		transform: 'translate(-50%, -50%)'
@@ -344,7 +366,8 @@ class Works extends Component {
 						<div>
 							<img src={images[index]} alt="Detail" />
 						</div>
-						<div dangerouslySetInnerHTML={{__html: contents[index]}}>
+						<div 
+							dangerouslySetInnerHTML={{__html: contents[index]}}>
 						</div>
 					</DetailContainer>
 				  </div>
